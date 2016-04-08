@@ -1,6 +1,11 @@
 var React = require('react');
-var PropTypes = React.PropTypes;
+var PropTypes = React.PropTypes; // PropTypes
 var transparentBg = require('../styles').transparentBg;
+
+/* functional stateless components
+since the component only has render UI and has propmt
+You can do function propmt instead of react.creatclass
+*/
 
 function Prompt (props) {
   return (
@@ -28,7 +33,6 @@ function Prompt (props) {
     </div>
   )
 }
-
 Prompt.propTypes = {
   onSubmitUser: PropTypes.func.isRequired,
   onUpdateUser: PropTypes.func.isRequired,
@@ -36,4 +40,4 @@ Prompt.propTypes = {
   username: PropTypes.string.isRequired,
 }
 
-module.exports = Prompt
+module.exports = Prompt;
