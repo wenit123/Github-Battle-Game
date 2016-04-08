@@ -9,6 +9,7 @@ var ResultsContainer = React.createClass({
       scores: []
     }
   },
+  
   componentDidMount: function () {
     githubHelpers.battle(this.props.location.state.playersInfo)
       .then(function (scores) {
@@ -18,7 +19,7 @@ var ResultsContainer = React.createClass({
         })
       }.bind(this))
   },
-  
+
   render: function () {
     return (
       <Results

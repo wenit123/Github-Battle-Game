@@ -32,13 +32,14 @@ var Loading = React.createClass({
       speed: 300
     }
   },
-  
+
   getInitialState: function () {
     this.originalText = this.props.text;
     return {
       text: this.originalText
     }
   },
+
   componentDidMount: function () {
     var stopper = this.originalText + '...'  // Loading ...
     this.interval = setInterval(function () {
@@ -53,6 +54,7 @@ var Loading = React.createClass({
       }
     }.bind(this), this.props.speed)
   },
+  
   componentWillUnmount: function () {
     window.clearInterval(this.interval)
   },

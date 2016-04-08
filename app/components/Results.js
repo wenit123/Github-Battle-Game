@@ -29,13 +29,13 @@ function Tie (props) {
 
 function Results (props) {
 	if (props.isLoading === true) {
-		return <Loading text="One Moment" speed={200} />
+		return <Loading />
 	}
 	if (props.scores[0] === props.scores[1]) {
 		return (
 			<Tie scores={props.scores} playersInfo={props.playersInfo}/>
 		)
-  	}
+  }
 	
 	var winningIndex = props.scores[0] > props.scores[1] ? 0 : 1; //0win
 	var losingIndex = winningIndex === 0 ? 1 : 0;
@@ -48,17 +48,17 @@ function Results (props) {
 			<UserDetails score = {props.scores[winningIndex]} Info={props.playersInfo[winningIndex]} />
 		</UserDetailsWrapper>
 
-  		<UserDetailsWrapper header='Loser'>
-  	  		<UserDetails score = {props.scores[losingIndex]} Info={props.playersInfo[losingIndex]} />
-  		</UserDetailsWrapper>
+  	<UserDetailsWrapper header='Loser'>
+  	  	<UserDetails score = {props.scores[losingIndex]} Info={props.playersInfo[losingIndex]} />
+  	</UserDetailsWrapper>
   
-  		</div>
-  		</MainContainer>
-  	)
+  	</div>
+    <StartOver />
+  	</MainContainer>
+  )
 }
 
 Results.propTypes = {
-  isLoading: PropTypes.bool.isRequired,
   playersInfo: PropTypes.array.isRequired,
   scores: PropTypes.array.isRequired
 }
