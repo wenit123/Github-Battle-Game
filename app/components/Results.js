@@ -29,7 +29,7 @@ function Tie (props) {
 
 function Results (props) {
 	if (props.isLoading === true) {
-		return <Loading />
+		return <Loading  text="One Moment" speed={200} />
 	}
 	if (props.scores[0] === props.scores[1]) {
 		return (
