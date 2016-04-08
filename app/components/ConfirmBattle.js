@@ -12,18 +12,17 @@ function ConfirmBattle (props) {
     : <div className="jumbotron col-sm-12 text-center" style={styles.transparentBg}>
         <h1>Confirm Players</h1>
         <div className='col-sm-8 col-sm-offset-2'>
-        ///Player 1 Info
+      
           <UserDetailsWrapper header='Player 1'>
             <UserDetails info={props.playersInfo[0]} />
           </UserDetailsWrapper>
-        /// Player 2 Info 
+      
           <UserDetailsWrapper header='Player 2'>
             <UserDetails info={props.playersInfo[1]} />
           </UserDetailsWrapper>
         </div>
         <div className='col-sm-8 col-sm-offset-2'>
           <div className='col-sm-12' style={styles.space}>
-          /// onclick button to the result
             <button type='button' className='btn btn-lg btn-success' onClick={props.onInitiateBattle}>Initiate Battle!</button>
           </div>
           <div className='col-sm-12' style={styles.space}>
@@ -38,6 +37,6 @@ function ConfirmBattle (props) {
 ConfirmBattle.propTypes = {
 	isLoading: PropTypes.bool.isRequired,
 	onInitiateBattle: PropTypes.func.isRequired,
-	playerinfo: PropTypes.array.isRequired
+	playerinfo: PropTypes.array.isRequired,
 }
 module.exports = ConfirmBattle;

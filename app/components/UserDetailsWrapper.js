@@ -3,9 +3,9 @@ var PropTypes = React.PropTypes;
 
 function UserDetailsWrapper (props) {
   return (
-    <div className='col-sm-6'>
+    <div className='col-sm-6'>  
       <p className='lead'>{props.header}</p>
-      {props.children}    // which is user details
+      {props.children}   
     </div>
   )
 }
