@@ -6,11 +6,6 @@ var Link = ReactRouter.Link;
 var UserDetailsWrapper = require('./UserDetailsWrapper');
 var UserDetails = require('./UserDetails');
 
-// show the detail
-function puke (obj) {
-  return <pre>{JSON.stringify(obj, null, ' ')}</pre>
-}
-
 function ConfirmBattle (props) {
   return props.isLoading === true
     ? <p>LOADING</p>
@@ -43,6 +38,6 @@ function ConfirmBattle (props) {
 ConfirmBattle.propTypes = {
 	isLoading: propTypes.bool.isRequired,
 	onInitiateBattle: PropTypes.func.isRequired,
-	playerinfo: propTypes.array.isRequired,
+	playerinfo: propTypes.array.isRequired
 }
 module.exports = ConfirmBattle;

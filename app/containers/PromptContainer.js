@@ -1,5 +1,5 @@
 var React = require('react');
-var transparentBg = require('../styles').transparentBg;
+//var transparentBg = require('../styles').transparentBg;
 // seperate UI to different file, to seperate the logic
 var Prompt = require('../components/Prompt');
 
