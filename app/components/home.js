@@ -1,7 +1,8 @@
 var React = require('react');
 var transparentBg = require('../styles').transparentBg;
-var Link = ReactRouter.Link
 var ReactRouter = require('react-router');
+var Link = ReactRouter.Link;
+
 
 /*
 var Home = React.createClass({

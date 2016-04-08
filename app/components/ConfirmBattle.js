@@ -1,4 +1,4 @@
-var React = requrie('react');
+var React = require('react');
 var PropTypes = React.PropTypes;
 var styles = require('../styles');
 var ReactRouter = require('react-router');
@@ -36,8 +36,8 @@ function ConfirmBattle (props) {
 }
 
 ConfirmBattle.propTypes = {
-	isLoading: propTypes.bool.isRequired,
+	isLoading: PropTypes.bool.isRequired,
 	onInitiateBattle: PropTypes.func.isRequired,
-	playerinfo: propTypes.array.isRequired
+	playerinfo: PropTypes.array.isRequired
 }
 module.exports = ConfirmBattle;
