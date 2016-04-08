@@ -18,6 +18,7 @@ var ResultsContainer = React.createClass({
         })
       }.bind(this))
   },
+  
   render: function () {
     return (
       <Results

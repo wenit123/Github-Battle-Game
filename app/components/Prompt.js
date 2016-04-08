@@ -33,6 +33,7 @@ function Prompt (props) {
     </div>
   )
 }
+
 Prompt.propTypes = {
   onSubmitUser: PropTypes.func.isRequired,
   onUpdateUser: PropTypes.func.isRequired,

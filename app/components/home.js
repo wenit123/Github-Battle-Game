@@ -2,6 +2,8 @@ var React = require('react');
 var transparentBg = require('../styles').transparentBg;
 var ReactRouter = require('react-router');
 var Link = ReactRouter.Link;
+var MainContainer = require('./MainContainer');
+
 
 
 /*
@@ -22,13 +24,13 @@ var Home = React.createClass({
 
 function Home () {
   return (
-    <div className="jumbotron col-sm-12 text-center" style={transparentBg}>
+    <MainContainer>
       <h1>Github Battle</h1>
-      <p className='lead'>What even is a jQuery?</p>
+      <p className='lead'> Are you ready? </p>
       <Link to='/playerOne'>
         <button type='button' className='btn btn-lg btn-success'>Get Started</button>
       </Link>
-    </div>
+    </MainContainer>
   )
 }
 module.exports = Home;
