@@ -19,16 +19,20 @@ var styles = {
 }
 
 var Loading = React.createClass({
+  // make the loading more style
   propTypes: {
     text: PropTypes.string,
     speed: PropTypes.number,
   },
+
+  //if have it will be ignor
   getDefaultProps: function () {
     return {
       text: 'Loading',
       speed: 300
     }
   },
+  
   getInitialState: function () {
     this.originalText = this.props.text;
     return {
@@ -44,7 +48,7 @@ var Loading = React.createClass({
         })
       } else {
         this.setState({
-          text: this.state.text + '.'  // Loading slinking
+          text: this.state.text + '.'  // Loading blinking
         })
       }
     }.bind(this), this.props.speed)
